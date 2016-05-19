@@ -1,0 +1,29 @@
+public class Console
+{
+ private enum typeMessage{baseMensileNonDisponibile, baseMendileDisponibile} // altro evetualmente
+	
+ public void visualizzaPostiDisponibili(List<postiAuto> l_postiAuto)
+ {
+  PostoAuto posto;
+  
+  while(l_postiAuto.hasNext)
+  {
+    posto = l_postiAuto.next;
+    system.out.println(posto.codicePosto, posto.tipo)
+  }
+ }
+ 
+ public void message(typeMessage)
+ {
+  switch(typeMessage)
+  {
+   case 1: baseMensileNonDisponibile  
+  	system.ou.println("base mensile non disponibile");
+	break;
+   case 2: baseMensileDisponibile
+	system.ou.println("base mensile disponibile");
+	break;
+  }
+ }
+ 
+}

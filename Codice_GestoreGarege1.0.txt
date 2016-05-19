@@ -1,0 +1,57 @@
+public class GestoreGarage
+{
+ LinkedList l_livelli = new LInkedList<Livello>;
+ int numPostiGarage;		
+ int totaleOrarioBase;		
+
+ private linkedList<PostoAuto> recuperaPostiAutoDisp(int numLivello)		//restituisce una lista di posti auto appartenenti ad un generico livello del garage
+ {
+   return l_livello.get(numLivello).getPostiDisponibili
+ }
+ 
+ public void verificaDisponibilitaPerLivello(int numLivello)			//recupera i posti relativi ad uno specifico livello. Esegue una callBack alla console che li visualizza
+ {
+   console.VisualizzaPostiAutoDisponibili(recuperaPostiAutoDisp(numLivello);
+ }
+
+ public void VerificaDisponibilitaGarage()					//per ogni livello del garage vengono visualizzati i posti disponibili mediante una callBack alla console.
+ {
+  for(int i=0; i <= l_livelli.size; i++)  console.VisualizzaPostiAutoDisponibili(recuperaPostiAutoDisp(i));
+ }
+
+ public void Fatturazione()							//viene chiesta una fatturazione ad un posto auto generico
+ {
+   int livelloPosto;
+   PostoAuto posto;
+   										//TODO splittare il codicePosto, utilizzare il primo carattere corrispondente al livello di appartenenza del postoAuto
+   livelloPosto = splitCodice(codicePosto); 					//splitCodice estrare il livello dal codice.Converte il primo carattere in int
+   
+   posto = l_livelli.get(livelloPosto).recuperaPosto(codicePosto);
+   if(!posto.isMensile) fatturazioneOraria(posto)				//se il posto auto è a base mensile si richiama la fatturazioneOraria
+   else fatturazioneMensile(posto);						
+
+   console.visualizzaFattura(totale)
+ }
+
+ private totale fatturazioneOraria(PostoAuto posto)				//si calcola una fatturazione oraria verificando l'eventuale applicazione della penale
+ {
+   timeStamp timeAttuale;
+   totale = totaleOrarioBase;
+
+   if(timeAttuale - posto.getTimeStampAttuale > 8) // APPPLICA PENALE totale += penale
+   
+   return totale;
+ }
+
+ public void disponibilitaTariffaMensile()					//verifila la possibilità di fittare un posto auto su base mensile	
+ {
+   int postiMensili = 0;
+
+   while(l_livelli.hasNext) postiMensili += l_livelli.next.getOccupatiMensili()			//getOccupati mensili scorre la lista dei posti occupati. Per ogni posto ne verifica la base di affitto
+												//restituisce infine il totale dei posti mensili per il livello analizzato.
+   if(postiMensili > (50/100)*numPostoGarage) console.message(BaseMensileNonDisponibile) 	// Il metodo message(enum typeMessage) visualizza un messaggio
+ 										    		// di errore relativo alla tipologia passatagli
+   else console.message(baseMensileDisponible)
+ }										     
+
+}
